@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:14:51 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/07/13 20:11:53 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/07/14 20:42:38 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@ void	do_rr(t_stack **stack_a, t_stack **stack_b);
 
 //Stack operations
 t_stack	*get_stack_bottom(t_stack *stack);
+t_stack	*get_stack_before_bottom(t_stack *stack);
+t_stack	*stack_new(int value);
+void	stack_add_bottom(t_stack **stack, t_stack *new);
+int		get_stack_size(t_stack *stack);
 
 //Utils
 void	ft_putstr(char *str);
