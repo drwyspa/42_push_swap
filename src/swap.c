@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 19:07:09 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/07/13 19:31:25 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/07/23 22:31:38 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	swap(t_stack *stack)
 	if (stack == NULL || stack->next == NULL)
 		return ;
 	tmp = stack->value;
-	stack->value - stack->next->value;
+	stack->value = stack->next->value;
 	stack->next->value = tmp;
 	tmp = stack->index;
 	stack->index = stack->next->index;
@@ -47,7 +47,7 @@ void	do_sb(t_stack **stack_b)
 //Prints "ss".
 void	do_ss(t_stack **stack_a, t_stack **stack_b)
 {
-	do_sa(*stack_a);
-	do_sb(*stack_b);
+	swap(*stack_a);
+	swap(*stack_b);
 	ft_putstr("ss\n");
 }

@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 21:47:16 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/07/23 22:26:10 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/07/23 22:28:33 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_stack	*fill_stack_values(int argc, char **argv)
 // 	ex. values:		-3	 0	 9	 2
 // 	indexes:		[1]	[2]	[4]	[3]
 // The indexes are assigned from highest (stack_size) to lowest (1).
-void	assing_index(t_stack *stack_a, int stack_size)
+void	assign_index(t_stack *stack_a, int stack_size)
 {
 	t_stack	*ptr;
 	t_stack	*highest;

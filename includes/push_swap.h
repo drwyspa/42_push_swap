@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:14:51 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/07/23 22:22:44 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/07/23 22:29:26 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ long int	ft_atoi(const char *str);
 
 //Init
 t_stack		*fill_stack_values(int argc, char **argv);
-void		assing_index(t_stack *stack_a, int stack_size);
+void		assign_index(t_stack *stack_a, int stack_size);
 
 //Error handling
 void		exit_error(t_stack **stack_a, t_stack **stack_b);
