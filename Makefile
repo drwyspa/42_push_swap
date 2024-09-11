@@ -6,11 +6,13 @@
 #    By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 22:12:21 by pjedrycz          #+#    #+#              #
-#    Updated: 2024/07/23 22:34:11 by pjedrycz         ###   ########.fr        #
+#    Updated: 2024/09/11 21:22:31 by pjedrycz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC 		= gcc
+SHELL = /bin/zsh
+
+CC 		= clang
 CFLAGS 	= -Wall -Werror -Wextra
 NAME 	= push_swap
 
@@ -48,3 +50,7 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+run:
+	make
+	setopt shwordsplit
