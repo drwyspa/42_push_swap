@@ -10,8 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-SHELL = /bin/zsh
-
 CC 		= clang
 CFLAGS 	= -Wall -Werror -Wextra
 NAME 	= push_swap
@@ -50,7 +48,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-run:
-	make
-	setopt shwordsplit
