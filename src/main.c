@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:13:19 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/07/23 22:21:16 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/19 22:15:35 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,20 @@ int	main(int argc, char **argv)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	int		stack_size;
+	char	**array;
 
-	if (argc < 2)
+	array = NULL;
+	if (argc == 2)
+		array = ft_split(argv[1], ' ');
+	else if (argc > 2)
+		array = arraydup(&argv[1]);
+	if (!array || argc < 2)
 		return (0);
-	if (!is_correct_input(argv))
+	if (!is_correct_input(array))
 		exit_error(NULL, NULL);
 	stack_b = NULL;
-	stack_a = fill_stack_values(argc, argv);
+	stack_a = fill_stack_values(argc, array);
+	freearray(array);
 	stack_size = get_stack_size(stack_a);
 	assign_index(stack_a, stack_size + 1);
 	push_swap(&stack_a, &stack_b, stack_size);

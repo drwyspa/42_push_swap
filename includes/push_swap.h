@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:14:51 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/07/23 22:29:26 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/23 21:46:23 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdio.h>
+// # include "libft.h"
 
 typedef struct s_stack
 {
@@ -77,6 +78,12 @@ void		ft_putstr(char *str);
 int			nb_abs(int nb);
 void		free_stack(t_stack **stack);
 long int	ft_atoi(const char *str);
+char		**ft_split(char const *s, char c);
+char		**arraydup(char **array);
+char		*ft_strdup(const char *s);
+int			freearray(char **array);
+size_t		ft_strlen(const char *s);
+size_t		ft_strlcpy(char *dst, const char *src, size_t n);
 
 //Init
 t_stack		*fill_stack_values(int argc, char **argv);

@@ -6,7 +6,7 @@
 #    By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 22:12:21 by pjedrycz          #+#    #+#              #
-#    Updated: 2024/09/11 21:22:31 by pjedrycz         ###   ########.fr        #
+#    Updated: 2024/09/17 21:41:05 by pjedrycz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRC_PATH = src/
 OBJ_PATH = obj/
 
 SRC		= main.c \
+		ft_split.c \
 		input_check.c input_check_utils.c \
 		initialization.c \
 		stack.c \
@@ -33,13 +34,13 @@ INCS 	= -I ./includes/
 all: $(OBJ_PATH) $(NAME)
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
-	$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
+	$(CC) $(CFLAGS) -c -g $< -o $@ $(INCS)
 
 $(OBJ_PATH):
 	mkdir $(OBJ_PATH)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -g -o $(NAME)
 
 clean:
 	rm -rf $(OBJ_PATH)

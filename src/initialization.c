@@ -6,13 +6,13 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 21:47:16 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/07/23 22:28:33 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/23 21:46:54 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*fill_stack_values(int argc, char **argv)
+t_stack	*fill_stack_values(int argc, char **array)
 {
 	t_stack		*stack_a;
 	long int	nb;
@@ -20,13 +20,14 @@ t_stack	*fill_stack_values(int argc, char **argv)
 
 	stack_a = NULL;
 	nb = 0;
-	i = 1;
-	while (i < argc)
+	i = 0;
+	// Tu jeszcze jedna pętla żeby iterować po j - array jest dwuwymiarowy w tym przypadku?
+	while (i < (argc - 1))
 	{
-		nb = ft_atoi(argv[i]);
+		nb = ft_atoi(array[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
 			exit_error(&stack_a, NULL);
-		if (i == 1)
+		if (i == 0) // tutaj i = 0? Ale też chyba j = 0. O ile powyższe będzie prawdą.
 			stack_a = stack_new((int)nb);
 		else
 			stack_add_bottom(&stack_a, stack_new((int)nb));
