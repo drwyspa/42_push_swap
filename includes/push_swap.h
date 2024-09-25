@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:14:51 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/09/23 21:46:23 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/25 21:43:15 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t n);
 
 //Init
-t_stack		*fill_stack_values(int argc, char **argv);
+t_stack		*fill_stack_values(t_stack *stack_a, char **array);
 void		assign_index(t_stack *stack_a, int stack_size);
 
 //Error handling
