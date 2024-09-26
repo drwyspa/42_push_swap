@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 20:56:19 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/09/17 22:30:53 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/26 19:06:44 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static int	arg_is_number(char *array)
 	int	i;
 
 	i = 0;
-	//if (is_sign(array[i]) && array[i + 1] != '\0')?
 	if (is_sign(array[i]) && array[i + 1] != '\0')
 		i++;
 	while (array[i] && is_digit(array[i]))
@@ -36,10 +35,10 @@ static int	have_duplicates(char **array)
 	int	i;
 	int	j;
 
-	i = 1;
+	i = 0;
 	while (array[i])
 	{
-		j = 1;
+		j = 0;
 		while (array[j])
 		{
 			if (j != i && nbstr_cmp(array[i], array[j]) == 0)
@@ -51,32 +50,13 @@ static int	have_duplicates(char **array)
 	return (0);
 }
 
-// Checks the argument is a 0 to avoid 0 +0 -0 duplicates
-// and 0 0000 +000 -00000000 too.
-// Return: 1 if the argument is a zero, 0 if it contains
-// anything else than a zero.
-static int	arg_is_zero(char *array)
-{
-	int	i;
-
-	i = 0;
-	while (array[i] && array[i] == 48)
-		i++;
-	if (array[i] != '\0')
-		return (0);
-	return (1);
-}
-
 //Validates all arguments. They should be numbers without duplicates.
 //1 if are valid and 0 if not.
-//bedzie trzeba dodac zmienna j, jak tylko zrobie opcje dla wiekszej niz 2 ilosci argumentow.
 int	is_correct_input(char **array)
 {
 	int	i;
 	int	j;
-	int	zeroes;
 
-	zeroes = 0;
 	i = 0;
 	j = 0;
 	while (array[i])
@@ -85,14 +65,11 @@ int	is_correct_input(char **array)
 		{
 			if (!arg_is_number(&array[i][j]))
 				return (0);
-			zeroes += arg_is_zero(&array[i][j]);
 			j++;
 		}
 		j = 0;
 		i++;
 	}
-	if (zeroes > 1)
-		return (0);
 	if (have_duplicates(array))
 		return (0);
 	return (1);

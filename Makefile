@@ -6,7 +6,7 @@
 #    By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/23 22:12:21 by pjedrycz          #+#    #+#              #
-#    Updated: 2024/09/17 21:41:05 by pjedrycz         ###   ########.fr        #
+#    Updated: 2024/09/26 19:08:57 by pjedrycz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC		= main.c \
 		swap.c push.c rotate.c reverse_rotate.c \
 		sort_tiny.c sort.c \
 		position.c cost.c do_move.c \
-		utils.c
+		utils.c utils_2.c
 SRCS 	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ 	= $(SRC:.c=.o)
 OBJS 	= $(addprefix $(OBJ_PATH), $(OBJ))

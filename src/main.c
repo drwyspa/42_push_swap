@@ -6,11 +6,12 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:13:19 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/09/25 21:43:14 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/26 19:06:59 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 // Checking if stack is already sorted. 1 if is sorted, 0 if not.
 
@@ -58,7 +59,8 @@ int	main(int argc, char **argv)
 	if (!is_correct_input(array))
 		exit_error(NULL, NULL);
 	stack_b = NULL;
-	stack_a = fill_stack_values(argc, array);//to jest do poprawy, funkcja jest przeciez zmieniona!
+	stack_a = NULL;
+	stack_a = fill_stack_values(stack_a, array);
 	freearray(array);
 	stack_size = get_stack_size(stack_a);
 	assign_index(stack_a, stack_size + 1);

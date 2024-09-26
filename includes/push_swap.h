@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:14:51 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/09/25 21:43:15 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:26:58 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdio.h>
-// # include "libft.h"
+///////////////////
+# include <stdbool.h>
 
 typedef struct s_stack
 {
