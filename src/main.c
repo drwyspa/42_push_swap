@@ -58,7 +58,7 @@ int	main(int argc, char **argv)
 	if (!is_correct_input(array))
 		exit_error(NULL, NULL);
 	stack_b = NULL;
-	stack_a = fill_stack_values(argc, array);
+	stack_a = fill_stack_values(argc, array);//to jest do poprawy, funkcja jest przeciez zmieniona!
 	freearray(array);
 	stack_size = get_stack_size(stack_a);
 	assign_index(stack_a, stack_size + 1);
