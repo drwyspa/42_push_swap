@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:13:19 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/09/26 21:03:50 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:55:25 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,7 @@ int	main(int argc, char **argv)
 	if (!array || argc < 2)
 		return (0);
 	if (!is_correct_input(array))
-	{
-		freearray(array);
-		exit_error(NULL, NULL);
-	}
+		exit_error(NULL, NULL, array);
 	stack_b = NULL;
 	stack_a = NULL;
 	stack_a = fill_stack_values(stack_a, array);

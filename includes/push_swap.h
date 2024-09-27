@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 19:14:51 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/09/26 21:01:25 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:55:35 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,6 @@ t_stack		*fill_stack_values(t_stack *stack_a, char **array);
 void		assign_index(t_stack *stack_a, int stack_size);
 
 //Error handling
-void		exit_error(t_stack **stack_a, t_stack **stack_b);
+void		exit_error(t_stack **stack_a, t_stack **stack_b, char **array);
 
 #endif

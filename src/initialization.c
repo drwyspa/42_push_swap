@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 21:47:16 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/09/26 18:26:02 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/27 14:08:00 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_stack	*fill_stack_values(t_stack *stack_a, char **array)
 	{
 		nb = ft_atoi(array[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
-			exit_error(&stack_a, NULL);
+			exit_error(&stack_a, NULL, array);
 		if (i == 0)
 			stack_a = stack_new((int)nb);
 		else

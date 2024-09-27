@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 19:13:53 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/09/26 21:01:27 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/09/27 16:55:29 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,13 @@ void	free_stack(t_stack **stack)
 
 // Writes "Error\n" after freeing stack a and b.
 // Exits with standard error code 1.
-void	exit_error(t_stack **stack_a, t_stack **stack_b)
+void	exit_error(t_stack **stack_a, t_stack **stack_b, char **array)
 {
 	if (stack_a == NULL || *stack_a != NULL)
 		free(stack_a);
 	if (stack_b == NULL || *stack_b != NULL)
 		free(stack_b);
+	freearray(array);
 	write(2, "Error\n", 6);
 	exit(1);
 }
